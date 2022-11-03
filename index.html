@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body id="play">
+
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+    <source src="vid.mp4" type="video/mp4">
+  </video>
+  
+  
+  <script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+    video.pause();
+    // Get the button
+    var btn = document.getElementById("[play]");
+   
+    document.body.addEventListener('click', play_it, true); 
+    
+    // Pause and play the video, and change the button text
+    function play_it() {
+        video.loop = false;
+        video.play();
+        
+    }
+    function pause() {
+        video.pause();
+    }
+    </script>
+        
+
+    </body>
+</html>
